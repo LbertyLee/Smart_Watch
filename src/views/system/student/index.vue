@@ -3,13 +3,13 @@
     <transition :enter-active-class="proxy?.animate.searchAnimate.enter" :leave-active-class="proxy?.animate.searchAnimate.leave">
       <div class="search" v-show="showSearch">
         <el-form :model="queryParams" ref="queryFormRef" :inline="true" label-width="68px">
-          <el-form-item label="" prop="name">
+          <el-form-item label="学生姓名" prop="name">
             <el-input v-model="queryParams.name" placeholder="请输入" clearable style="width: 240px" @keyup.enter="handleQuery" />
           </el-form-item>
-          <el-form-item label="" prop="uuid">
+          <el-form-item label="手环ID" prop="uuid">
             <el-input v-model="queryParams.uuid" placeholder="请输入" clearable style="width: 240px" @keyup.enter="handleQuery" />
           </el-form-item>
-          <el-form-item label="" prop="studentNumber">
+          <el-form-item label="学号" prop="studentNumber">
             <el-input v-model="queryParams.studentNumber" placeholder="请输入" clearable style="width: 240px" @keyup.enter="handleQuery" />
           </el-form-item>
           <el-form-item>
@@ -68,13 +68,13 @@
     <!-- 添加或修改学生信息对话框 -->
     <el-dialog :title="dialog.title" v-model="dialog.visible" width="500px" append-to-body>
       <el-form ref="studentInfoFormRef" :model="form" :rules="rules" label-width="80px">
-        <el-form-item label="" prop="name">
+        <el-form-item label="学生姓名" prop="name">
           <el-input v-model="form.name" placeholder="请输入" />
         </el-form-item>
-        <el-form-item label="" prop="uuid">
+        <el-form-item label="手环ID" prop="uuid">
           <el-input v-model="form.uuid" placeholder="请输入" />
         </el-form-item>
-        <el-form-item label="" prop="studentNumber">
+        <el-form-item label="学号" prop="studentNumber">
           <el-input v-model="form.studentNumber" placeholder="请输入" />
         </el-form-item>
       </el-form>

@@ -33,7 +33,7 @@ export const getStudentInfo = (id: string | number): AxiosPromise<StudentInfoVO>
  */
 export const addStudentInfo = (data: StudentInfoForm) => {
   return request({
-    url: '/system/studentInfo',
+    url: '/teacher/studentInfo',
     method: 'post',
     data: data
   });
@@ -45,7 +45,7 @@ export const addStudentInfo = (data: StudentInfoForm) => {
  */
 export const updateStudentInfo = (data: StudentInfoForm) => {
   return request({
-    url: '/system/studentInfo',
+    url: '/teacher/studentInfo',
     method: 'put',
     data: data
   });
@@ -57,7 +57,7 @@ export const updateStudentInfo = (data: StudentInfoForm) => {
  */
 export const delStudentInfo = (id: string | number | Array<string | number>) => {
   return request({
-    url: '/system/studentInfo/' + id,
+    url: '/teacher/studentInfo/' + id,
     method: 'delete'
   });
 };
